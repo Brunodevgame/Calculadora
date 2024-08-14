@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fundo {
+    background-image: linear-gradient(45deg, black, rgb(220, 207, 20));
+    height: 100vh;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.Calculadora {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8); /* Corrigido o valor da opacidade */
+    color: rgba(231, 231, 3, 0.87);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    padding: 15px; 
+    font-size: 19px; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold; /* Torna o texto mais visível */
+    text-align: center; /* Centraliza o texto */
+    animation: brilho 4s infinite; /* Aplica a animação */
+}
+@keyframes brilho {
+    0% {
+        text-shadow: 0 0 5px rgba(231, 231, 3, 0.87);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(231, 231, 3, 0.87), 0 0 30px rgba(231, 231, 3, 0.87);
+    }
+    75% {
+        text-shadow: 0 0 20px rgba(231, 231, 3, 0.87), 0 0 30px rgba(231, 231, 3, 0.87);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(231, 231, 3, 0.87);
+    }
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    background-color: rgba(231, 231, 3, 0.87);
+    cursor: pointer;
+    margin: 3px;
+    border: none;
+
+}
+.btn:hover {
+    background-color: rgb(229, 255, 0);
+}
+#resultado {
+    background-color: #FFFFFF;
+    opacity: 50%;
+    width: 220px; /* Largura fixa do visor */
+    height: 30px;
+    margin: 5px;
+    color: black;
+    text-align: right;
+    padding: 5px;
+    overflow: hidden; /* Esconde qualquer excesso de conteúdo */
+    white-space: nowrap; /* Impede quebra de linha */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+    text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
+}
+
+
